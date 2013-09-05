@@ -1,12 +1,13 @@
 public class Warmup {
 	public static void main(String[] args) {
 	  
-	  int n = sum(5);
-	  System.out.println("The sum from 1 to 5 is " + n);
-	  if (n == (1+2+3+4+5)) {
-	  	System.out.println("I got it right!");
-	  }
+	  // int n = sum(5);
+	  // System.out.println("The sum from 1 to 5 is " + n);
+	  // if (n == (1+2+3+4+5)) {
+	  // 	System.out.println("I got it right!");
+	  // }
       
+      exponent(2,3);
 
 	}
 
@@ -18,9 +19,17 @@ public class Warmup {
 		return sum;
 	}
 
-	public static int exponent(int n) {
-		int exponent = 0;
-		
+	public static int exponent(int x, int n) {
+		int y =1;
+		for (int i = n; i > 0; i-- ) {
+			y=y*x;
+		}
+		System.out.println(y);
+		return y;
+	}
+
+	public static int factorial(int n) {
+		int factorial=0;
 	}
 	
 }
