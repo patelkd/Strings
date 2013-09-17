@@ -17,48 +17,60 @@ public class Strings {
 		// 	System.out.println(str.substring(i,i+2));
 		// }
 
-		if (contains ("baseball", "ball")) {
-			System.out.println("Yes");
+		// if (contains ("baseball", "ball")) {
+		// 	System.out.println("Yes");
+		// } else {
+		// 	System.out.println("No");
+		// }
+
+
+		// count("people", "e");
+		// hasAnA("Array")
+
+		if (isAbcedarian("acknow")) {
+			System.out.println("yes");
 		} else {
-			System.out.println("No");
-		}
-
-
-		count("people", "e");
-		hasAnA("Array")
-	}
-
-	public static int isAbcedarian(String s) {
-		for (int i=0; i<s.length; i++) {
-			if(s.chartAt())
-
+			System.out.println("no");
 		}
 	}
 
-
-	public static int hasAnA(String s) {
-		char a = ''
-		for (int i=0; i<s.length; i++) {
-			System.out.println(str.charAt(a));
-		}
-	}
-
-
-	//returns number of instances of t inside of s
-	public static int count(String s, String t) {
-		for (int i=0; i <=s.length()-t.length()+1; i++) {
-			if (s.substring(i, i+t.length()).equals(t) ) {
-				sum +=1;
-		}
-	}
-
-	public static boolean contains(String s, String t) {
-		for (int i=0; i <=s.length()-t.length()+1; i++) {
-			if (s.substring(i, i+t.length()).equals(t) ) {
-				return true;
+	public static boolean isAbcedarian(String s) {
+		int index = 0;
+		char c = 'a';
+		while (index <s.length()) {
+			if (c> s.charAt(index)) {
+				return false;
 			}
+			c = s.charAt(index);
+			index = index + 1;
 		}
-
-		return false;
+		return true;
 	}
 }
+
+// 	public static int hasAnA(String s) {
+// 		char a = ''
+// 		for (int i=0; i<s.length; i++) {
+// 			System.out.println(str.charAt(a));
+// 		}
+// 	}
+
+
+// 	//returns number of instances of t inside of s
+// 	public static int count(String s, String t) {
+// 		for (int i=0; i <=s.length()-t.length()+1; i++) {
+// 			if (s.substring(i, i+t.length()).equals(t) ) {
+// 				sum +=1;
+// 		}
+// 	}
+
+// 	public static boolean contains(String s, String t) {
+// 		for (int i=0; i <=s.length()-t.length()+1; i++) {
+// 			if (s.substring(i, i+t.length()).equals(t) ) {
+// 				return true;
+// 			}
+// 		}
+
+// 		return false;
+// 	}
+// }
