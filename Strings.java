@@ -40,7 +40,7 @@ public class Strings {
 		// 	System.out.println("no");
 		// }
 
-		captainCrunch("hippos", 10);
+	captainCrunch("hippos", 10);
 }
 
 	public static boolean isAbcedarian(String s) {
