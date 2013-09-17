@@ -34,11 +34,13 @@ public class Strings {
 	// 	}
 	// 
 
-		if (isDupledrome("llaammaa")) {
-			System.out.println("yes");
-		} else {
-			System.out.println("no");
-		}
+		// if (isDupledrome("llaammaa")) {
+		// 	System.out.println("yes");
+		// } else {
+		// 	System.out.println("no");
+		// }
+
+		captainCrunch("hippos", 10);
 }
 
 	public static boolean isAbcedarian(String s) {
@@ -68,6 +70,38 @@ public class Strings {
 			index = index + 2;
 		}
 		return true;
+	}
+
+	public static String captainCrunch (String s, int n) {
+		String encoded = "";
+		n = n%26;
+		int index = 0;
+
+		while (index < s.length()) {
+			char current = s.charAt(index);
+			if (current >= 'a' && current <= 'z') {
+				int converted = current + n;
+				if (converted > 'z') {
+					converted = (converted - 'z') + 'a' -1;
+				} else if (current < 'a') {
+					converted = 'z' - ('a' - converted) + 1;
+					}
+				encoded = encoded + (char)converted; 
+			} else if (current >= 'A' && current <= 'Z') {
+				int converted = current + n;
+				if (converted > 'Z') {
+					converted = (converted - 'Z') + 'A' -1;
+				} else if (current < 'A') {
+					converted = 'Z' - ('A' - converted) + 1;
+					}
+				encoded = encoded + (char)converted;
+			} else {
+				encoded= encoded + (char)current;
+			}
+			index = index + 1;
+		}
+		System.out.println(encoded);
+		return encoded;
 	}
 
 // 	public static int hasAnA(String s) {
