@@ -27,12 +27,19 @@ public class Strings {
 		// count("people", "e");
 		// hasAnA("Array")
 
-		if (isAbcedarian("acknow")) {
+	// 	if (isAbcedarian("acknow")) {
+	// 		System.out.println("yes");
+	// 	} else {
+	// 		System.out.println("no");
+	// 	}
+	// 
+
+		if (isDupledrome("llaammaa")) {
 			System.out.println("yes");
 		} else {
 			System.out.println("no");
 		}
-	}
+}
 
 	public static boolean isAbcedarian(String s) {
 		int index = 0;
@@ -46,7 +53,22 @@ public class Strings {
 		}
 		return true;
 	}
-}
+
+	public static boolean isDupledrome(String s) {
+		int length = s.length();
+
+		if (length % 2 != 0) {
+			return false;
+		}
+		int index = 0;
+		while (index < length) {
+			if (s.charAt(index) != s.charAt(index +1) ) {
+				return false;
+			}
+			index = index + 2;
+		}
+		return true;
+	}
 
 // 	public static int hasAnA(String s) {
 // 		char a = ''
@@ -73,4 +95,4 @@ public class Strings {
 
 // 		return false;
 // 	}
-// }
+}
